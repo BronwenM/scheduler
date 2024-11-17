@@ -25,6 +25,7 @@ export default function Application(props) {
 
   const appointments = getAppointmentsForDay(state, state.day).map(
     appointment => {
+      // console.log('interviewers inside appointments map', interviewers);
       return (
         <Appointment
           key={appointment.id}
@@ -37,6 +38,10 @@ export default function Application(props) {
       );
     }
   );
+
+
+  // console.log('state', state)
+  // console.log('appointments', appointments.length);
 
   return (
     <main className="layout">
